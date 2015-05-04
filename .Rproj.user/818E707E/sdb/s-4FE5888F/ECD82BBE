@@ -1,0 +1,17 @@
+{
+    "contents" : "require(tmvtnorm)\n\n# evaluating p-dim integrals in eqn (3) & (6)\n\n# return parameters of f(theta) i.e. tau [sd vector], theta0 [mean vector]\n\n# FUNCTION\n\n\n\n# return N random sample of theta\n# input parameters of f(theta) i.e. tau [sd vector], theta0 [mean vector], [lower, upper] range of theta\nsample_ftheta = function(theta0, tau, lower, upper, N=10000, algorithm='rejection'){\n  sigma_matrix = diag(tau^2)\n  samp = rtmvnorm(n=N, mean=theta0, sigma=sigma_matrix, lower=lower, upper=upper, algorithm=algorithm)\n  return(samp)\n}\n\n# return estimate of f(x_i)\n# input sampled theta, mu, sigma, x, t\n# Monte Carlo integration\nest_fx = function(theta, mu, sigma, x, t){\n  \n}\n\n\n\n# Epanechnikov kernel\nK = function(t){\n  res = 0.75*(1-t^2)*(abs(t)<=1)\n  return(res)\n}\n\n# return estimate of wij(s|x_i)\n# input sampled theta, mu, sigma, x, t, kernel parameters i.e. c1, c2\n# kernel-smoothed Monte Carlo integration (Epanechnikov kernel)\nest_w = function(theta, mu, sigma, x, t, c1, c2){\n  \n}\n\n\n\nalpha <- pmvnorm(lower=a, upper=b, mean=mu, sigma=sigma)",
+    "created" : 1430539946962.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2576727165",
+    "id" : "ECD82BBE",
+    "lastKnownWriteTime" : 1430572543,
+    "path" : "~/Desktop/Cornell/Class/ORIE 6070/Project/R Code/Simulation.R",
+    "project_path" : "Simulation.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
