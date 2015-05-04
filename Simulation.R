@@ -149,7 +149,7 @@ eval = function(data, t_index, init_res, tol=10^-4, max_itr = 1000){
 ##################
 
 # data, n-by-m_i (m_i = m in our case)
-setwd('/home/wenyu/Desktop/Cornell/Class/ORIE 6070/Project/R Code')
+#setwd('/home/wenyu/Desktop/Cornell/Class/ORIE 6070/Project/R Code')
 subj0 = read.csv(file="subj0.csv",head=FALSE,sep=",") # 53-by-128
 data = as.matrix(subj0)
 t_index = (1:128)*2
